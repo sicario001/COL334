@@ -1,0 +1,23 @@
+RxDrop at 1.24615
+RxDrop at 1.77179
+RxDrop at 1.82743
+RxDrop at 3.88743
+RxDrop at 3.93336
+RxDrop at 4.03622
+RxDrop at 11.4678
+RxDrop at 13.1981
+RxDrop at 13.2474
+RxDrop at 14.6869
+RxDrop at 17.1829
+RxDrop at 20.5398
+RxDrop at 21.3078
+RxDrop at 21.5494
+RxDrop at 24.3334
+RxDrop at 24.5254
+RxDrop at 24.7669
+RxDrop at 24.8126
+RxDrop at 26.1574
+RxDrop at 26.2122
+RxDrop at 26.5199
+RxDrop at 29.3254
+Total dropped packets: 22
