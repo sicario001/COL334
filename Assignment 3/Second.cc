@@ -13,7 +13,7 @@ Most of the code has been adapted from the seventh.cc file of ns3 examples
 
 using namespace ns3;
 
-NS_LOG_COMPONENT_DEFINE ("A3Part1");
+NS_LOG_COMPONENT_DEFINE ("A3Part2");
 
 
 class MyApp : public Application
@@ -161,7 +161,7 @@ void generatePlotCwnd(std::string input, std::string output){
     plot << "set title \"Congestion Window vs. Time\""<<std::endl;
     plot << "set xlabel \"Time (seconds)\""<<std::endl;
     plot << "set ylabel \"Congestion Window Size (Bytes)\""<<std::endl;
-    plot << "plot \"output/"+input+"\" using 1:2 title 'Congestion Window' with linespoints"<<std::endl;
+    plot << "plot \"output/"+input+"\" using 1:2 title 'Congestion Window' with linespoints pt 1 ps 0.1"<<std::endl;
     plot.close();
     std::string cmd = "gnuplot output/plot.plt";
     const char *command = cmd.c_str();

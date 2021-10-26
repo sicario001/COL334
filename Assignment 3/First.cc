@@ -161,7 +161,7 @@ void generatePlotCwnd(std::string input, std::string output){
     plot << "set title \"Congestion Window vs. Time\""<<std::endl;
     plot << "set xlabel \"Time (seconds)\""<<std::endl;
     plot << "set ylabel \"Congestion Window Size (Bytes)\""<<std::endl;
-    plot << "plot \"output/"+input+"\" using 1:2 title 'Congestion Window' with linespoints"<<std::endl;
+    plot << "plot \"output/"+input+"\" using 1:2 title 'Congestion Window' with linespoints pt 1 ps 0.1"<<std::endl;
     plot.close();
     std::string cmd = "gnuplot output/plot.plt";
     const char *command = cmd.c_str();
@@ -293,7 +293,7 @@ int main (int argc, char *argv[])
         Ptr<Socket> ns3TcpSocket = Socket::CreateSocket (nodes.Get (0), TcpSocketFactory::GetTypeId ());
 
         Ptr<MyApp> app = CreateObject<MyApp> ();
-        app->Setup (ns3TcpSocket, sinkAddress, 3000, 2000, DataRate ("1Mbps"));
+        app->Setup (ns3TcpSocket, sinkAddress, 3000, -1, DataRate ("1Mbps"));
         nodes.Get (0)->AddApplication (app);
         app->SetStartTime (Seconds (1.));
         app->SetStopTime (Seconds (30.));
